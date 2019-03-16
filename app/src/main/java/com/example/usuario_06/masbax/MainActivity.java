@@ -6,11 +6,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
 
     CheckBox chkCasado;
     Button btnEnviar;
+    RadioButton rbMasculino;
+    RadioButton rbFemenino;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         chkCasado=(CheckBox)findViewById(R.id.chkCasado);
         btnEnviar=(Button)findViewById(R.id.btnEnviar);
+        rbMasculino=(RadioButton)findViewById(R.id.rbMasculino);
+        rbFemenino=(RadioButton)findViewById(R.id.rbFemenino);
+
+
 
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     Log.i("cheeck baxxxxx: ","eres feliz");
                 }
+                if(rbMasculino.isChecked()){
+                    Log.e("Genero ",  "Masculino");
+                }else{
+                    Log.e("Genero ", "Femenino");
+                }
+
+
             }
         });
 
