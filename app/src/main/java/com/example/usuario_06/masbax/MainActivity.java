@@ -1,5 +1,6 @@
 package com.example.usuario_06.masbax;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("Genero ", "Femenino");
                 }
                 Log.e("Idioma: ",spinIdiomas.getSelectedItem().toString());
+                Intent iVentana2 = new Intent(getBaseContext(),SegundaActividad.class);
+                iVentana2.putExtra("Nombre","Luis");
+
+                startActivity(iVentana2);
 
             }
         });
